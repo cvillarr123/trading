@@ -1,3 +1,4 @@
+import numpy as np
 def haversine(lon1: float, lat1: float, lon2: float, lat2: float) -> float:
     """
     Calculate the great circle distance between two points on the
@@ -16,8 +17,7 @@ def haversine(lon1: float, lat1: float, lon2: float, lat2: float) -> float:
     # Haversine formula
     dlon = lon2 - lon1
     dlat = lat2 - lat1
-    a = np.sin(dlat/2.0)**2 + np.cos(lat1) * np.cos(lat2) *
-        np.sin(dlon/2.0)**2
+    a = np.sin(dlat/2.0)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon/2.0)**2
     c = 2 * np.arcsin(np.sqrt(a))
     km = 6367 * c
     return km * 1000
