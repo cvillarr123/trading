@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 
+import pypm
+
 from pypm import metrics, signals, data_io, simulation, optimization
 from pypm.optimization import GridSearchOptimizer
 
