@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-
+import sys, os
 import pypm
 
 from pypm import metrics, signals, data_io, simulation, optimization
@@ -46,6 +46,13 @@ def bind_simulator(**sim_kwargs) -> Callable:
     return _simulate
 
 if __name__ == '__main__':
+
+
+ #   sys.path.append(os.getcwd())
+
+
+ #   sys.path.insert(0,os.getcwd()+'\\src\\pym')
+ #   sys.path.insert(0,os.getcwd()+'\\src\\pym\\ml_model')
 
     simulate = bind_simulator(initial_cash=10000, max_active_positions=5)
 
